@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-plum: #43245e;
+  --color-purple: #79538d;
+  --color-lavender: #eadcf0;
+  --color-sage: #8d9c76;
+  --color-olive: #586a36;
+  --color-olive-dark: #46552a;
+  --color-cream: #faf7f1;
+  --color-blush: #f6eae6;
+  --color-charcoal: #25252d;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+
+  --shadow-soft: 0 10px 40px -12px rgb(67 36 94 / 0.18);
+  --shadow-float: 0 24px 60px -20px rgb(67 36 94 / 0.28);
+
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-sway: sway 7s ease-in-out infinite;
+  --animate-flutter: flutter 9s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes sway {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2.5deg); }
+  }
+  @keyframes flutter {
+    0%, 100% { transform: translate(0, 0) rotate(-4deg); }
+    50% { transform: translate(6px, -10px) rotate(4deg); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-lavender);
+  color: var(--color-plum);
+}
+
+/* Scroll reveal (paired with <Reveal />). Content stays visible without JS. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animated underline for nav and text links */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.35s ease;
+}
+.link-underline:hover,
+.link-underline[aria-current="page"] {
+  background-size: 100% 1.5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js [data-reveal] { opacity: 1; transform: none; }
+}

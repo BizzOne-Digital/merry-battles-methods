@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/utils";
 export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Get in touch with The Merry Battles Method by phone or email to ask about parenting, relationship, or sobriety coaching and pricing.",
+    "Schedule an introductory call with Merry Battles by phone, email, or message to start parenting, relationship, or sobriety coaching.",
   path: "/contact",
   image: images.contactHero.src,
 });
@@ -25,11 +25,35 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Let's Start"
-        highlight="the Conversation"
-        description="Reaching out is the first step. Share a little about what you're looking for, and you'll hear back about how The Merry Battles Method can support you."
+        title="Schedule Your"
+        highlight="Introductory Call"
+        description="Getting started is simple. Call, email, or send a message below to set up a first conversation with Merry about what you're facing and where you'd like to go."
         image={images.contactHero}
       />
+
+      {/* How to get started */}
+      <section aria-labelledby="steps-heading" className="pb-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 id="steps-heading" className="sr-only">How to get started</h2>
+          <ol className="grid gap-4 md:grid-cols-3">
+            {[
+              { n: "1", t: "Reach out", d: `Call ${site.phoneDisplay}, email, or send the form below.` },
+              { n: "2", t: "Have your introductory call", d: "Talk about what you're facing, your goals, and any questions." },
+              { n: "3", t: "Begin coaching", d: "Start taking practical, supported steps toward meaningful change." },
+            ].map((s) => (
+              <li key={s.n} className="flex gap-4 rounded-[1.75rem] bg-white p-6 shadow-soft ring-1 ring-plum/5">
+                <span className="grid size-11 shrink-0 place-items-center rounded-full bg-plum font-serif text-xl font-semibold text-white">
+                  {s.n}
+                </span>
+                <span>
+                  <span className="block font-serif text-xl font-semibold text-plum">{s.t}</span>
+                  <span className="mt-1 block text-[15px] text-charcoal/75">{s.d}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
       <section className="relative isolate overflow-hidden pb-24 sm:pb-32">
         <LeafBranch className="absolute -right-10 bottom-10 -z-10 h-96 w-64 -scale-x-100 animate-sway opacity-60" />
@@ -40,7 +64,7 @@ export default function ContactPage() {
               <Butterfly className="absolute -bottom-4 -right-4 size-32 text-lavender opacity-25" />
               <h2 className="font-serif text-3xl font-semibold sm:text-4xl">Reach Out Directly</h2>
               <p className="mt-3 text-white/80">
-                Prefer to talk? Call or email any time, and we&apos;ll get back to you as soon as possible.
+                The fastest way to schedule your introductory call is to call or email directly.
               </p>
               <ul className="mt-8 space-y-4">
                 {details.map(({ icon: Icon, label, value, href }) => {

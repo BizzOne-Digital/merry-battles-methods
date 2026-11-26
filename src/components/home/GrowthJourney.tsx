@@ -3,7 +3,7 @@ import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const steps = [
-  { icon: MessageCircleHeart, title: "Reach Out", text: "Begin with a conversation about your needs and goals." },
+  { icon: MessageCircleHeart, title: "Schedule an Introductory Call", text: "Call, email, or send a message to set up a first conversation about your needs and goals." },
   { icon: Compass, title: "Find Your Direction", text: "Explore practical tools, encouragement, and personalized support." },
   { icon: Footprints, title: "Move Forward", text: "Take meaningful steps toward healthier habits and lasting progress." },
 ];

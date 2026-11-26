@@ -1,7 +1,8 @@
 import Hero from "@/components/home/Hero";
 import FeaturedServices from "@/components/home/FeaturedServices";
-import SupportivePath from "@/components/home/SupportivePath";
-import AboutPreview from "@/components/home/AboutPreview";
+import MeetMerry from "@/components/home/MeetMerry";
+import MethodDifference from "@/components/home/MethodDifference";
+import Pricing from "@/components/ui/Pricing";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import GrowthJourney from "@/components/home/GrowthJourney";
 import WhoWeHelp from "@/components/home/WhoWeHelp";
@@ -15,7 +16,7 @@ export const metadata = {
   ...pageMetadata({
     title: "Parenting, Relationship & Sobriety Coaching",
     description:
-      "Find your peace, strengthen your relationships, and reclaim your life with practical guidance, accountability, and encouragement from The Merry Battles Method.",
+      "Parenting, relationship, and sobriety coaching with Merry Battles — a clinical social worker and Certified Advanced Alcohol and Drug Counselor with 20+ years of experience.",
     path: "/",
     image: images.hero.src,
   }),
@@ -27,12 +28,13 @@ export default function HomePage() {
     <>
       <Hero />
       <FeaturedServices />
-      <SupportivePath />
-      <AboutPreview />
+      <MeetMerry />
+      <MethodDifference />
       <ServicesOverview />
       <WhoWeHelp />
       <SoundFamiliar />
       <GrowthJourney />
+      <Pricing />
       <FAQPreview />
       <ContactCTA />
     </>

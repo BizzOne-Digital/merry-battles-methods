@@ -6,8 +6,9 @@ export const site = {
   name: "The Merry Battles Method",
   shortName: "Merry Battles Method",
   tagline: "Find Your Peace. Strengthen Your Relationships. Reclaim Your Life.",
+  heroTagline: "Real-Life Challenges. Practical Guidance. Meaningful Change.",
   description:
-    "Practical guidance, accountability, and encouragement for individuals, parents, and couples seeking meaningful, lasting change.",
+    "The Merry Battles Method helps individuals and parents navigate life's challenges, develop healthier habits, and move forward with greater confidence, clarity, and peace.",
   email: "merry_battles@yahoo.com",
   phoneDisplay: "(269) 491-4935",
   phoneHref: "tel:+12694914935",
@@ -19,6 +20,53 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   hasRealDomain: Boolean(process.env.NEXT_PUBLIC_SITE_URL),
 } as const;
+
+/** Founder details — written by Merry Battles. */
+export const founder = {
+  name: "Merry Battles",
+  /** Add a headshot path (e.g. "/images/merry.webp") to show a photo instead of the logo card. */
+  photo: null as string | null,
+  credentials: [
+    "Clinical Social Worker",
+    "Certified Advanced Alcohol & Drug Counselor",
+    "20+ years helping individuals & families",
+    "Personal journey in recovery",
+  ],
+  headline: "Experience, Compassion, and a Commitment to Helping People Grow",
+  philosophy: "You don't have to be perfect to make progress. You just have to be willing to begin.",
+  bio: [
+    "For more than two decades, I have dedicated my professional life to helping individuals and families navigate life's challenges, overcome obstacles, and discover their capacity for meaningful change.",
+    "As a clinical social worker and Certified Advanced Alcohol and Drug Counselor, I have worked with people facing difficult life circumstances, relationship challenges, substance use concerns, and significant personal transitions.",
+    "My work has taught me that change doesn't happen overnight. It happens through self-awareness, honest conversations, practical tools, accountability, and the willingness to take one step at a time.",
+    "My commitment to this work is also personal. Having experienced my own journey of recovery and personal growth, I understand the importance of encouragement, perseverance, and having someone who believes in your ability to move forward.",
+    "I created The Merry Battles Method to bring together my professional experience, personal insight, and passion for helping people navigate life's everyday battles.",
+  ],
+  closing: "Let's work together to make your next chapter a meaningful one.",
+};
+
+/**
+ * Pricing — set `price` once the client confirms it (e.g. "$75").
+ * While it is null, the site shows "Contact for pricing" everywhere.
+ */
+export const pricing = {
+  session: {
+    price: null as string | null,
+    unit: "per session",
+    title: "Coaching Session",
+    description: "One-on-one coaching for parenting, relationship growth, or sobriety support.",
+    features: [
+      "Practical tools you can use right away",
+      "Encouragement and accountability",
+      "Guidance tailored to your goals",
+    ],
+  },
+  intro: {
+    title: "Introductory Call",
+    description:
+      "Start with a conversation about what you're facing and your goals, and see if The Merry Battles Method is the right fit for you.",
+    features: ["Share what you're working through", "Ask any questions", "Talk through next steps"],
+  },
+};
 
 export const navigation = [
   { label: "Home", href: "/" },

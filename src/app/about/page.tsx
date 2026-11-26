@@ -7,14 +7,16 @@ import Reveal from "@/components/ui/Reveal";
 import ServiceIcon from "@/components/ui/ServiceIcon";
 import ContactCTA from "@/components/home/ContactCTA";
 import { LeafBranch } from "@/components/ui/BotanicalDecoration";
-import { images } from "@/data/site";
+import { founder, images } from "@/data/site";
+import { FounderCard } from "@/components/home/MeetMerry";
+import Button from "@/components/ui/Button";
 import { services } from "@/data/services";
 import { pageMetadata } from "@/lib/utils";
 
 export const metadata = pageMetadata({
-  title: "About Us",
+  title: "About Merry Battles",
   description:
-    "Learn about The Merry Battles Method — a compassionate, practical approach to parenting, relationship growth, and sobriety coaching.",
+    "Meet Merry Battles — clinical social worker, Certified Advanced Alcohol and Drug Counselor, and founder of The Merry Battles Method, with 20+ years of experience and a personal journey in recovery.",
   path: "/about",
   image: images.aboutHero.src,
 });
@@ -31,28 +33,32 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Us"
-        title="A Compassionate Approach"
-        highlight="to Meaningful Change"
-        description="The Merry Battles Method exists to help people find more peace at home, healthier connections, and the encouragement to keep growing."
+        title="Meet Merry Battles"
+        highlight="Founder of the Method"
+        description="Professional experience, personal insight, and a passion for helping people navigate life's everyday battles."
         image={images.aboutHero}
       />
 
-      {/* Introduction */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-8">
-          <Reveal>
-            <SectionHeading align="left" eyebrow="The Method" title="Everyday Battles," highlight="Met with Encouragement" />
+      {/* Founder story */}
+      <section id="story" className="scroll-mt-24 py-20 sm:py-28">
+        <div className="mx-auto grid max-w-7xl items-start gap-14 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-8">
+          <Reveal className="lg:sticky lg:top-28">
+            <FounderCard />
           </Reveal>
-          <Reveal delay={120} className="space-y-5 text-lg text-charcoal/80">
-            <p>
-              Life brings its share of battles — a tense moment with a child, a hard conversation with someone we love,
-              or the daily commitment to staying sober. The Merry Battles Method is built on the belief that these
-              challenges don&apos;t have to be faced alone.
-            </p>
-            <p>
-              Through practical guidance, accountability, and genuine encouragement, the method supports individuals,
-              parents, and couples who are ready for meaningful, lasting change — one realistic step at a time.
-            </p>
+          <Reveal delay={120}>
+            <SectionHeading align="left" eyebrow="My story" title="Experience, Compassion," highlight="and a Commitment to Helping People Grow" />
+            <div className="mt-8 space-y-5 text-lg leading-relaxed text-charcoal/80">
+              {founder.bio.map((p) => (
+                <p key={p.slice(0, 24)}>{p}</p>
+              ))}
+            </div>
+            <blockquote className="mt-10 rounded-[2rem] bg-lavender/60 p-8 sm:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-olive">My philosophy</p>
+              <p className="mt-3 font-serif text-3xl font-medium italic leading-snug text-plum">&ldquo;{founder.philosophy}&rdquo;</p>
+            </blockquote>
+            <p className="mt-8 font-serif text-2xl font-semibold text-olive">{founder.closing}</p>
+            <p className="mt-1 font-serif text-xl italic text-plum">— {founder.name}</p>
+            <Button href="/contact" className="mt-8">Schedule an Introductory Call</Button>
           </Reveal>
         </div>
       </section>

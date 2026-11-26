@@ -7,7 +7,7 @@ import { Butterfly, Sprig } from "@/components/ui/BotanicalDecoration";
 export default function ContactCTA({
   title = "Your Next Chapter Can Begin Today",
   description = "You don't have to navigate life's challenges without encouragement. Take the first step toward greater peace, healthier relationships, and personal growth.",
-  buttonLabel = "Get in Touch",
+  buttonLabel = "Schedule an Introductory Call",
 }: {
   title?: string;
   description?: string;

@@ -39,7 +39,17 @@ export const faqs: FAQ[] = [
   {
     question: "How do I get started?",
     answer:
-      "Simply reach out by phone, email, or the contact form. Share a little about what you're looking for, and you'll hear back to talk through your needs and next steps.",
+      "Start by scheduling an introductory call. Call (269) 491-4935, email merry_battles@yahoo.com, or use the form on the Contact page. You'll talk through what you're facing, your goals, and the next steps.",
+  },
+  {
+    question: "What happens during the introductory call?",
+    answer:
+      "It's a first conversation to talk about what you're working through, ask any questions, and decide together whether The Merry Battles Method is the right fit for you.",
+  },
+  {
+    question: "Who is Merry Battles?",
+    answer:
+      "Merry Battles is a clinical social worker and Certified Advanced Alcohol and Drug Counselor with more than two decades of experience helping individuals and families. Her commitment is also personal — she has experienced her own journey of recovery and personal growth.",
   },
   {
     question: "How much do your services cost?",

@@ -75,7 +75,7 @@ export default function Header() {
             href="/contact"
             className="group hidden items-center gap-2 rounded-full bg-olive px-6 py-3 text-[15px] font-semibold text-white shadow-[0_10px_30px_-10px_rgb(88_106_54/0.6)] transition-all hover:-translate-y-0.5 hover:bg-olive-dark focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plum sm:inline-flex"
           >
-            Get in Touch
+            Schedule a Call
             <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1" />
           </Link>
           <MobileNavigation pathname={pathname} />

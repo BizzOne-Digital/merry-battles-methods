@@ -103,7 +103,7 @@ export default function MobileNavigation({ pathname }: { pathname: string }) {
             href="/contact"
             className="mt-4 flex min-h-12 items-center justify-center rounded-full bg-olive font-semibold text-white"
           >
-            Get in Touch
+            Schedule an Introductory Call
           </Link>
         </div>
       </div>

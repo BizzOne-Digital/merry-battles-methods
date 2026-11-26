@@ -5,6 +5,7 @@ import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import ServiceIcon from "@/components/ui/ServiceIcon";
 import ContactCTA from "@/components/home/ContactCTA";
+import Pricing from "@/components/ui/Pricing";
 import { images, site } from "@/data/site";
 import { services } from "@/data/services";
 import { cn, pageMetadata } from "@/lib/utils";
@@ -103,8 +104,8 @@ export default function ServicesPage() {
                   )}
 
                   <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                    <Button href="/contact">Get in Touch</Button>
-                    <span className="text-sm text-charcoal/60">{site.pricing}</span>
+                    <Button href="/contact">Schedule an Introductory Call</Button>
+                    <a href="#pricing" className="text-sm font-semibold text-olive underline-offset-4 hover:underline">View pricing</a>
                   </div>
                 </Reveal>
               </div>
@@ -112,6 +113,8 @@ export default function ServicesPage() {
           );
         })}
       </div>
+
+      <Pricing />
 
       <ContactCTA
         title="Let's Take the Next Step Together"

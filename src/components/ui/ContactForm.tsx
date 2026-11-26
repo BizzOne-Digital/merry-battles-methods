@@ -10,7 +10,7 @@ type Fields = { name: string; email: string; phone: string; service: string; mes
 type Errors = Partial<Record<keyof Fields, string>>;
 
 const empty: Fields = { name: "", email: "", phone: "", service: "", message: "" };
-const serviceOptions = [...services.map((s) => s.title), "General Inquiry"];
+const serviceOptions = ["Introductory Call", ...services.map((s) => s.title), "General Inquiry"];
 
 function validate(f: Fields): Errors {
   const e: Errors = {};
@@ -105,7 +105,7 @@ export default function ContactForm() {
         <div>
           <Label k="service">Service Interested In</Label>
           <select required {...field("service")}>
-            <option value="" disabled>Select a service</option>
+            <option value="" disabled>Select an option</option>
             {serviceOptions.map((o) => (
               <option key={o} value={o}>{o}</option>
             ))}
@@ -122,7 +122,7 @@ export default function ContactForm() {
       <p id="cf-help" className="rounded-2xl bg-lavender/50 p-4 text-sm text-charcoal/75">
         Clicking the button below opens your email app with your message ready to send to{" "}
         <span className="font-semibold text-plum">{site.email}</span>. Your message is only sent once you press
-        &ldquo;Send&rdquo; in your email app.
+        &ldquo;Send&rdquo; in your email app. Choose &ldquo;Introductory Call&rdquo; to request your first conversation.
       </p>
 
       <button

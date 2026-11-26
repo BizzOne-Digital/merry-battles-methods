@@ -12,7 +12,7 @@ export const site = {
   email: "merry_battles@yahoo.com",
   phoneDisplay: "(269) 491-4935",
   phoneHref: "tel:+12694914935",
-  pricing: "Contact for pricing",
+  pricing: "$75 per session",
   /**
    * Set NEXT_PUBLIC_SITE_URL once the real domain is live.
    * Canonical URLs and the sitemap use this value.
@@ -45,12 +45,12 @@ export const founder = {
 };
 
 /**
- * Pricing — set `price` once the client confirms it (e.g. "$75").
- * While it is null, the site shows "Contact for pricing" everywhere.
+ * Pricing — change `price` here and every pricing block updates.
+ * If set to null, the site shows "Contact for pricing" instead.
  */
 export const pricing = {
   session: {
-    price: null as string | null,
+    price: "$75" as string | null,
     unit: "per session",
     title: "Coaching Session",
     description: "One-on-one coaching for parenting, relationship growth, or sobriety support.",

@@ -54,7 +54,7 @@ export const faqs: FAQ[] = [
   {
     question: "How much do your services cost?",
     answer:
-      "Pricing is shared directly. Please get in touch by phone or email to ask about pricing for the support you're interested in.",
+      "Coaching sessions are $75 per session. To get started, schedule an introductory call by phone, email, or through the Contact page.",
   },
   {
     question: "How can I contact you?",
